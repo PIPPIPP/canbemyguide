@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
-import 'readpage.dart';
 
 void main() {
-  runApp(FirstPage());
+  runApp(ReadPage());
 }
 
-class FirstPage extends StatefulWidget {
-  FirstPage({Key key}) : super(key: key);
+class ReadPage extends StatefulWidget {
+  ReadPage({Key key}) : super(key: key);
 
   @override
-  _FirstPage createState() => _FirstPage();
+  _ReadPage createState() => _ReadPage();
 }
 
-class _FirstPage extends State<FirstPage> {
+class _ReadPage extends State<ReadPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,7 +22,8 @@ class _FirstPage extends State<FirstPage> {
             mainAxisSize: MainAxisSize.min,
             children: [
               new Container(
-                  margin: EdgeInsets.only(left: 100, right: 100, top: 10),
+                  margin: EdgeInsets.only(
+                      top: 50, bottom: 0, left: 100, right: 100),
                   child: new Row(
                     children: <Widget>[
                       new Expanded(
@@ -33,26 +33,15 @@ class _FirstPage extends State<FirstPage> {
                         color: Color(0xff56776c),
                         shape: new RoundedRectangleBorder(
                             borderRadius: new BorderRadius.circular(20.0)),
-                        onPressed: () => {
-                          Navigator.pushReplacement(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => ReadPage()))
-                        },
+                        onPressed: () => {},
                       ))
                     ],
                   )),
               const SizedBox(
-                width: 10,
-                height: 200,
+                height: 500,
               ),
             ],
           ),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(10.0),
-          ),
-          elevation: 6,
-          margin: EdgeInsets.only(top: 10, left: 10, right: 10),
         )));
   }
 }
