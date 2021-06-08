@@ -23,29 +23,41 @@ class _FirstPage extends State<FirstPage> {
             mainAxisSize: MainAxisSize.min,
             children: [
               new Container(
-                  margin: EdgeInsets.only(left: 100, right: 100, top: 10),
-                  child: new Row(
-                    children: <Widget>[
-                      new Expanded(
-                          child: new RaisedButton(
-                        child: new Text("Find Guide"),
-                        textColor: Colors.white,
-                        color: Color(0xff56776c),
-                        shape: new RoundedRectangleBorder(
-                            borderRadius: new BorderRadius.circular(20.0)),
-                        onPressed: () => {
-                          Navigator.pushReplacement(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => ReadPage()))
-                        },
-                      ))
-                    ],
-                  )),
-              const SizedBox(
-                width: 10,
-                height: 200,
-              ),
+                  margin: EdgeInsets.all(20),
+                  child: new Column(children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Image.asset(
+                          'images/P1.JPG',
+                          height: 200,
+                          width: 200,
+                          fit: BoxFit.fitHeight,
+                        ),
+                        const InkWell(
+                          child: Text('Wat Phra Kaew'),
+                        ),
+                      ],
+                    ),
+                    Container(
+                        padding: EdgeInsets.only(
+                          left: 220,
+                        ),
+                        child: new ButtonTheme(
+                            child: new RaisedButton(
+                          child: new Text("Find Guide"),
+                          textColor: Colors.white,
+                          color: Color(0xff56776c),
+                          shape: new RoundedRectangleBorder(
+                              borderRadius: new BorderRadius.circular(20.0)),
+                          onPressed: () => {
+                            Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => ReadPage()))
+                          },
+                        )))
+                  ])),
             ],
           ),
           shape: RoundedRectangleBorder(
@@ -56,3 +68,7 @@ class _FirstPage extends State<FirstPage> {
         )));
   }
 }
+
+//const SizedBox(
+//               height: 500,
+//           ),
