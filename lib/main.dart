@@ -5,6 +5,7 @@ import 'package:itg2/main.dart';
 import 'sign_up.dart';
 import 'inputname.dart';
 import 'findguide.dart';
+import 'guidedetail.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:itg2/guidedetail.dart';
 
 void main() {
   runApp(FindGuidPage());
@@ -45,7 +46,12 @@ class _FindGuidPage extends State<FindGuidPage> {
                 top: 10,
               ),
               child: ListTile(
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => GuideDetailPage()));
+                },
                 title: Text(titles[index]),
                 subtitle: Text(subtitles[index]),
                 leading: CircleAvatar(
