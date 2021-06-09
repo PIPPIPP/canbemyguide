@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:itg2/findguide.dart';
 
 void main() {
   runApp(ReadPage());
@@ -38,7 +39,9 @@ class _ReadPage extends State<ReadPage> {
                             'Wat Phra Kaew',
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                                color: Color(0xff56776C), fontSize: 20),
+                                color: Color(0xff56776C),
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold),
                           ),
                         ),
                         const InkWell(
@@ -67,7 +70,7 @@ class _ReadPage extends State<ReadPage> {
                             Navigator.pushReplacement(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => ReadPage()))
+                                    builder: (context) => FindGuidPage()))
                           },
                         )))
                   ])),

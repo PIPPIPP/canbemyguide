@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:itg2/firstpage.dart';
 import 'package:itg2/sign_in.dart';
 import 'sign_up.dart';
 import 'inputname.dart';
@@ -71,10 +72,8 @@ class _SigninPageState extends State<SigninPage> {
                   shape: new RoundedRectangleBorder(
                       borderRadius: new BorderRadius.circular(20.0)),
                   onPressed: () => {
-                    Navigator.pushReplacement(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => InputNamePage()))
+                    Navigator.pushReplacement(context,
+                        MaterialPageRoute(builder: (context) => FirstPage()))
                   },
                 ))
               ],

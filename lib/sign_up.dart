@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:itg2/inputname.dart';
 
 void main() {
   runApp(SignupPage());
@@ -74,7 +75,12 @@ class _SignupPageState extends State<SignupPage> {
                   color: Color(0xff56776c),
                   shape: new RoundedRectangleBorder(
                       borderRadius: new BorderRadius.circular(20.0)),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => InputNamePage()));
+                  },
                 ))
               ],
             ),
